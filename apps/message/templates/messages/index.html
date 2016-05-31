@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Messages</title>
+</head>
+<body>
+ <h1>Message</h1>
+ <form action="{% url 'message_index' %}" method="POST">
+   {% csrf_token %}
+  <label for="message_text">Message:</label>
+  <textarea id="message_text" name="message_text" cols="30" rows="10"></textarea>
+  <input type="submit" value="Post message">
+ </form>
+</body>
+</html>
